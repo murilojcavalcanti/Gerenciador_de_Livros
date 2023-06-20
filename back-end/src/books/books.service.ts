@@ -16,10 +16,6 @@ export class BooksService {
     const book = this.bookRepository.create(AddBookDto)
     return this.bookRepository.save(book);
   }
-  async upload(file : Express.Multer.File, path : string){
-    return await writeFile(path,file.buffer)
-    
-}
   
   async FindAllBooks(){
     return this.bookRepository.find({order:{startedAt:'DESC'}});
