@@ -1,14 +1,17 @@
 export class AddBookDto {
-    Title: string
 
-    Authors: string
+    book_id: number
 
-    NumberOfPages: number
+    title: string
 
-    Score:number
+    tuthors: string
 
-    Thumb: string
+    numberOfPages: number
 
-    StartedAt: Date
+    score:number
+
+    thumb: string
+
+    startedAt: Date
     
 }

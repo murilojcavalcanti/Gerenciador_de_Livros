@@ -22,18 +22,18 @@ export class BooksService {
 }
   
   async FindAllBooks(){
-    return this.bookRepository.find({order:{StartedAt:'DESC'}});
+    return this.bookRepository.find({order:{startedAt:'DESC'}});
   }
 
   findOne(id: number) {
     return this.bookRepository.findOneBy({id})
   }
 
-  update(id: number, {Conclued_At,Score,Review}: UpdateBookDto) {
+  update(id: number, {ended_At,score,review}: UpdateBookDto) {
     const data:any= []
-    if(Conclued_At) data.Conclued_At = Conclued_At
-    if(Score) data.Score = Score
-    if(Review) data.Review = Review
+    if(ended_At) data.Conclued_At = ended_At
+    if(score) data.Score = score
+    if(review) data.Review = review
     
     return this.bookRepository.update(id,data);
   }

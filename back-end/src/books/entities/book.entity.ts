@@ -8,45 +8,52 @@ export class Book{
     @Column({
         nullable:false
     })
-    Title: string
+    title: string
 
     @Column({
         nullable:false
     })
-    Authors: string
+    books_id: string
+
 
     @Column({
         nullable:false
     })
-    NumberOfPages: number
+    authors: string
 
     @Column({
         nullable:false
     })
-    Thumb: string
+    numberOfPages: number
+
+    @Column({
+        nullable:false
+    })
+    thumbnail: string
 
     @CreateDateColumn({ 
         type: "timestamp", default: () => "CURRENT_TIMESTAMP(6)",
         nullable: false
      })
-    StartedAt: Date
+    startedAt: Date
 
     @CreateDateColumn({ 
         type: "timestamp",
-        nullable:true
+        nullable:true,
+        default:null
      })
-    Conclued_At: Date
+    ended_At: Date
 
     @Column({
         nullable:false
     })
-    Score: Number
+    score: Number
 
     @Column({
         default:"",
         nullable:true
     })
-    Review:string
+    review: string
 
 
 }

@@ -3,8 +3,8 @@ import { AddBookDto } from './Add-book.dto';
 
 export class UpdateBookDto extends PartialType(AddBookDto) {
     
-Conclued_At: Date
+ended_At: Date
 
-Review:string
+review:string
 
 }
